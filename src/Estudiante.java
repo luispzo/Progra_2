@@ -14,7 +14,6 @@ public class Estudiante {
         this(nombre,banner);
         this.semestre;
     }
-    public Estudiante(String nombre, String banner, String semestre){
-        this(nombre,banner,semestre);
+
     }
 }
