@@ -18,7 +18,7 @@ public class Main {
 
         numeros[2]=-1;
 
-
+        //revisar grabacion
         int i = numeros[0];
         int j = numeros[1];
         int k = numeros[2];

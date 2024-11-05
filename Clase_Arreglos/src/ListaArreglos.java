@@ -5,7 +5,7 @@ import java.util.List;
 public class ListaArreglos {
     public static void main(String[] args){
         //Creacion de un Arraylist
-        List<String> listColores = new ArrayList<>();
+        List<String> listaColores = new ArrayList<>();
 
         //Creacion medante la clase Arrays
         String[] nombres = {"Arturo","Daniel","Pamela"}; //creo un arreglo y luego le paso a una lista
@@ -13,9 +13,9 @@ public class ListaArreglos {
 
         //Adicion de elementos individuales
         listaColores.add("Verde");
-        listColores.add("Amarillo");
+        listaColores.add("Amarillo");
 
         //Construir lista a partir de otra lista
-        List<Sting> listaElementos = new ArrayList<>(listaColores);
+        List<String> listaElementos = new ArrayList<>(listaColores);
     }
 }
