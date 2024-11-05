@@ -21,5 +21,12 @@ public class ListaArreglos {
 
         //Construir lista a partir de otra lista
         List<String> listaElementos = new ArrayList<>(listaColores);
+
+        //adicion de elementos a otra coleccón
+        listaElementos.addAll(listaNombres);
+
+        //despluegue de elementos de la lista
+        System.out.println("Lista Nombre");
+        listaNombres.forEach();
     }
 }
