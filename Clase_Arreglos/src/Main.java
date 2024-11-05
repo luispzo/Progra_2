@@ -1,5 +1,5 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -31,13 +31,16 @@ public class Main {
 
         //vectores: son estaticos porque yo le pongo el valor
         //listas son dinamicas
-
         String[] productos = new String[3];
         productos[0]="Memoria";
         productos[1]="Samsung S2-3";
         productos[2]="MacBook Air";
-        //Arrays.sort(productos);
-        System.out.println("productos[0] = " + productos[0]);
+
+        Arrays.sort(productos); //ordena un vector
+        for(int p=0; p<3; p++) {
+            System.out.println("productos[i] = " + productos[p]);
+        }
+
 
         }
     }
