@@ -20,6 +20,6 @@ public class PrincipalHerencia {
         alumnoint.setCiudad("oda");
         Profesor profesor = new Profesor();
 
-
+//ODA
     }
 }

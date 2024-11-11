@@ -6,7 +6,7 @@ public class AlumnoInt extends Alumno {
     public String getCiudad() {
         return ciudad;
     }
-
+//oda
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
     }

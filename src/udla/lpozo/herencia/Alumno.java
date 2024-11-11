@@ -13,7 +13,7 @@ public class Alumno extends Persona {
     public void setCarrera(String carrera) {
         this.carrera = carrera;
     }
-
+//oda
     public double getNotap1() {
         return notap1;
     }

@@ -31,7 +31,7 @@ public /*final <- es para prevenir herencia*/ class Persona {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-
+//oda
     public String getCorreo() {
         return correo;
     }
