@@ -1,0 +1,10 @@
+package udla.lpozo.abstraccion.interfaz.modelo;
+
+public enum Genero {
+    DRAMA,
+    ACCION,
+    AVENTURA,
+    TERROR,
+    CIENCIA_FICCION,
+    PROGRAMACION
+}
