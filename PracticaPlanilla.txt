@@ -1,0 +1,88 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean running = true;
+
+        // Lista genérica para almacenar datos (puedes cambiarla según el caso).
+        List<String> items = new ArrayList<>();
+
+        // Menú principal
+        while (running) {
+            System.out.println("\n--- Menú Principal ---");
+            System.out.println("1. Añadir elemento");
+            System.out.println("2. Eliminar elemento");
+            System.out.println("3. Mostrar elementos");
+            System.out.println("4. Salir");
+            System.out.print("Selecciona una opción: ");
+
+            int opcion = scanner.nextInt();
+            scanner.nextLine(); // Limpiar el buffer.
+
+            switch (opcion) {
+                case 1:
+                    addItem(scanner, items);
+                    break;
+                case 2:
+                    removeItem(scanner, items);
+                    break;
+                case 3:
+                    listItems(items);
+                    break;
+                case 4:
+                    System.out.println("¡Hasta luego!");
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Opción no válida. Intenta de nuevo.");
+            }
+        }
+    }
+
+    // Método para añadir un elemento a la lista
+    public static void addItem(Scanner scanner, List<String> items) {
+        System.out.print("Ingresa el nombre del elemento a añadir: ");
+        String item = scanner.nextLine();
+        items.add(item);
+        System.out.println("Elemento añadido: " + item);
+    }
+
+    // Método para eliminar un elemento de la lista
+    public static void removeItem(Scanner scanner, List<String> items) {
+        if (items.isEmpty()) {
+            System.out.println("La lista está vacía. No hay nada que eliminar.");
+            return;
+        }
+
+        System.out.println("Elementos disponibles:");
+        for (int i = 0; i < items.size(); i++) {
+            System.out.println((i + 1) + ". " + items.get(i));
+        }
+
+        System.out.print("Selecciona el número del elemento a eliminar: ");
+        int index = scanner.nextInt();
+        scanner.nextLine(); // Limpiar el buffer.
+
+        if (index > 0 && index <= items.size()) {
+            String removedItem = items.remove(index - 1);
+            System.out.println("Elemento eliminado: " + removedItem);
+        } else {
+            System.out.println("Índice no válido.");
+        }
+    }
+
+    // Método para mostrar todos los elementos de la lista
+    public static void listItems(List<String> items) {
+        if (items.isEmpty()) {
+            System.out.println("La lista está vacía.");
+        } else {
+            System.out.println("\n--- Lista de Elementos ---");
+            for (int i = 0; i < items.size(); i++) {
+                System.out.println((i + 1) + ". " + items.get(i));
+            }
+        }
+    }
+}
